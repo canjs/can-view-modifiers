@@ -1,8 +1,8 @@
 require('can/map/map');
 require('can/view/stache/stache');
-require('can/test/test');
 require('steal-qunit');
 
+require('./test/helper');
 require('./can-view-modifiers');
 
 QUnit.module('can/view/modifiers');
