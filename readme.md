@@ -1,3 +1,6 @@
+@page can-view-modifiers
+@test src/test/test.html
+
 # can-view-modifiers
 
 [![Build Status](https://travis-ci.org/canjs/can-view-modifiers.png?branch=master)](https://travis-ci.org/canjs/can-view-modifiers)
