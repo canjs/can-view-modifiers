@@ -1,6 +1,6 @@
 {
   "name": "can-view-modifiers",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Use jQuery modifiers to render views",
   "homepage": "https://canjs.com",
   "author": {
