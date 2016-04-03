@@ -113,7 +113,7 @@ getCallback = function (args) {
 };
 /**
  *  @function jQuery.fn.hookup
- *  @parent can.view.modifiers
+ *  @parent can-view-modifiers.api
  *  Called on a jQuery collection that was rendered with can.View with pending hookups.  can.View can render a
  *  template with hookups, but not actually perform the hookup, because it returns a string without actual DOM
  *  elements to hook up to.  So hookup performs the hookup and clears the pending hookups, preventing errors in
@@ -130,10 +130,10 @@ $.fn.hookup = function () {
 can.each([
 	/**
 	 *  @function jQuery.fn.prepend
-	 *  @parent can.view.modifiers
+	 *  @parent can-view-modifiers.api
 	 *
 	 *  Extending the original [http://api.jquery.com/prepend/ jQuery().prepend()]
-	 *  to render [can.view] templates inserted at the beginning of each element in the set of matched elements.
+	 *  to render [can.view](http://canjs.com/docs/can.view.html) templates inserted at the beginning of each element in the set of matched elements.
 	 *
 	 *		$('#test').prepend('path/to/template.stache', { name : 'canjs' });
 	 *
@@ -150,10 +150,10 @@ can.each([
 	"prepend",
 	/**
 	 *  @function jQuery.fn.append
-	 *  @parent can.view.modifiers
+	 *  @parent can-view-modifiers.api
 	 *
 	 *  Extending the original [http://api.jquery.com/append/ jQuery().append()]
-	 *  to render [can.view] templates inserted at the end of each element in the set of matched elements.
+	 *  to render [can.view](http://canjs.com/docs/can.view.html) templates inserted at the end of each element in the set of matched elements.
 	 *
 	 *		$('#test').append('path/to/template.stache', { name : 'canjs' });
 	 *
@@ -170,10 +170,10 @@ can.each([
 	"append",
 	/**
 	 *  @function jQuery.fn.after
-	 *  @parent can.view.modifiers
+	 *  @parent can-view-modifiers.api
 	 *
 	 *  Extending the original [http://api.jquery.com/after/ jQuery().after()]
-	 *  to render [can.view] templates inserted after each element in the set of matched elements.
+	 *  to render [can.view](http://canjs.com/docs/can.view.html) templates inserted after each element in the set of matched elements.
 	 *
 	 *		$('#test').after('path/to/template.stache', { name : 'canjs' });
 	 *
@@ -190,10 +190,10 @@ can.each([
 	"after",
 	/**
 	 *  @function jQuery.fn.before
-	 *  @parent can.view.modifiers
+	 *  @parent can-view-modifiers.api
 	 *
 	 *  Extending the original [http://api.jquery.com/before/ jQuery().before()]
-	 *  to render [can.view] templates inserted before each element in the set of matched elements.
+	 *  to render [can.view](http://canjs.com/docs/can.view.html) templates inserted before each element in the set of matched elements.
 	 *
 	 *		$('#test').before('path/to/template.stache', { name : 'canjs' });
 	 *
@@ -210,10 +210,10 @@ can.each([
 	"before",
 	/**
 	 *  @function jQuery.fn.text
-	 *  @parent can.view.modifiers
+	 *  @parent can-view-modifiers.api
 	 *
 	 *  Extending the original [http://api.jquery.com/text/ jQuery().text()]
-	 *  to render [can.View] templates as the content of each matched element.
+	 *  to render [can.view](http://canjs.com/docs/can.view.html) templates as the content of each matched element.
 	 *  Unlike [jQuery.fn.html] jQuery.fn.text also works with XML, escaping the provided
 	 *  string as necessary.
 	 *
@@ -232,10 +232,10 @@ can.each([
 	"text",
 	/**
 	 *  @function jQuery.fn.html
-	 *  @parent can.view.modifiers
+	 *  @parent can-view-modifiers.api
 	 *
 	 *  Extending the original [http://api.jquery.com/html/ jQuery().html()]
-	 *  to render [can.view] templates as the content of each matched element.
+	 *  to render [can.view](http://canjs.com/docs/can.view.html) templates as the content of each matched element.
 	 *
 	 *		$('#test').html('path/to/template.stache', { name : 'canjs' });
 	 *
@@ -252,10 +252,10 @@ can.each([
 	"html",
 	/**
 	 *  @function jQuery.fn.replaceWith
-	 *  @parent can.view.modifiers
+	 *  @parent can-view-modifiers.api
 	 *
 	 *  Extending the original [http://api.jquery.com/replaceWith/ jQuery().replaceWith()]
-	 *  to render [can.view] templates replacing each element in the set of matched elements.
+	 *  to render [can.view](http://canjs.com/docs/can.view.html) templates replacing each element in the set of matched elements.
 	 *
 	 *		$('#test').replacesWith('path/to/template.stache', { name : 'canjs' });
 	 *
