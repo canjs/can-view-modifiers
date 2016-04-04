@@ -1,8 +1,6 @@
-@page can-view-modifiers
-@group can-view-modifiers.api API
-@test src/test/test.html
+# can-view-modifiers (DEPRECATED)
 
-## can-view-modifiers
+*The can-view-modifiers plugin is deprecated*
 
 [![Build Status](https://travis-ci.org/canjs/can-view-modifiers.png?branch=master)](https://travis-ci.org/canjs/can-view-modifiers)
 
@@ -12,13 +10,13 @@ Use jQuery modifiers to render views
 
 The can/view/modifiers plugin extends the jQuery view modifiers
 
-* [jQuery.fn.after .after()]
-* [jQuery.fn.append .append()]
-* [jQuery.fn.before .before()]
-* [jQuery.fn.html .html()]
-* [jQuery.fn.prepend .prepend()]
-* [jQuery.fn.replaceWith .replaceWith()]
-* [jQuery.fn.text .text()]
+* jQuery.fn.after
+* jQuery.fn.append
+* jQuery.fn.before
+* jQuery.fn.html
+* jQuery.fn.prepend
+* jQuery.fn.replaceWith
+* jQuery.fn.text
 
 to render a [can.view](http://canjs.com/docs/can.view.html). When rendering a view you call the view modifier the same way
 as can.view with the view name or id as the first, the data as the second and the optional
@@ -52,6 +50,9 @@ and render static content. The following example inserts the content of _content
 		url : 'content/info.html'
 	}));
 
+### API
+
+For API details, see `src/can-view-modifiers.js`
 
 ## Usage
 
