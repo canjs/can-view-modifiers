@@ -1,5 +1,7 @@
 # can-view-modifiers (DEPRECATED)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-view-modifiers.svg)](https://greenkeeper.io/)
+
 *The can-view-modifiers plugin is deprecated*
 
 [![Build Status](https://travis-ci.org/canjs/can-view-modifiers.png?branch=master)](https://travis-ci.org/canjs/can-view-modifiers)
