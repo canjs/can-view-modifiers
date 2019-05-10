@@ -8,12 +8,12 @@ require('./can-view-modifiers');
 QUnit.module('can/view/modifiers');
 // this only applied to jQuery libs
 if (window.jQuery) {
-	test('modifier with a deferred', function() {
+	QUnit.test('modifier with a deferred', function(assert) {
 
 		$('#qunit-fixture')
 			.html('');
 
-		stop();
+		var done = assert.async();
 		var foo = can.Deferred();
 		$('#qunit-fixture')
 			.html(can.test.path('./src/test/deferred.stache'), foo);
@@ -39,9 +39,9 @@ if (window.jQuery) {
 
 		can.when(foo, templateLoaded).then(function() {
 			setTimeout(function() {
-				equal($('#qunit-fixture')
+				assert.equal($('#qunit-fixture')
 					.html(), 'FOO', 'worked!');
-				start();
+				done();
 			}, 10);
 
 		});
@@ -54,28 +54,28 @@ if (window.jQuery) {
 	 $("#qunit-fixture textarea").val("asdf");
 	 equal($("#qunit-fixture textarea").val(), "asdf");
 	 });*/
-	test('html takes promise', function() {
+	QUnit.test('html takes promise', function(assert) {
 		var d = new can.Deferred();
 		can.$('#qunit-fixture')
 			.html(d);
-		stop();
-		d.done(function() {
-			equal(can.$('#qunit-fixture')
+		var done = assert.async();
+		d.start(function() {
+			assert.equal(can.$('#qunit-fixture')
 				.html(), 'Hello World', 'deferred is working');
-			start();
+			done();
 		});
 		setTimeout(function() {
 			d.resolve('Hello World');
 		}, 10);
 	});
 
-	test('hookups don\'t break script execution (issue #130)', function() {
+	QUnit.test('hookups don\'t break script execution (issue #130)', function(assert) {
 		// this simulates a pending hookup (hasn't been run yet)
 		can.view.hook(function() {});
 		// this simulates HTML with script tags being loaded (probably legacy code)
 		can.$('#qunit-fixture')
 			.html('<script>can.$(\'#qunit-fixture\').html(\'OK\')</script>');
-		equal(can.$('#qunit-fixture')
+		assert.equal(can.$('#qunit-fixture')
 			.html(), 'OK');
 		can.$('#qunit-fixture')
 			.html('');
